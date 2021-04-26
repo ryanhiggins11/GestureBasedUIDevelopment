@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar xml:lang="en" root="pausemenu"
+tag-format="semantics/1.0" version="1.0"
+xmlns="http://www.w3.org/2001/06/grammar">
+
+  <!--Menu Controls-->
+  <rule id="pausemenu">
+    <one-of>
+      <!--Resume-->
+      <item>
+        <ruleref uri="#resume"/>
+      </item>
+      <!--Pause-->
+      <item>
+        <ruleref uri="#pause"/>
+      </item>
+      <!--Menu-->
+      <item>
+        <ruleref uri="#quit"/>
+      </item>
+    </one-of>
+  </rule>
+
+
+  <!--Resume recognized phrases-->
+  <rule id="resume">
+    <tag>out.action = "resume";</tag>
+    <one-of>
+      <item>Resume the game</item>
+      <item>Resume game</item>
+      <item>Resume</item>
+
+      <item>Unpause</item>
+      <item>Unpause the game</item>
+
+      <item>Continue</item>
+      <item>Continue playing</item>
+    </one-of>
+  </rule>
+  <!--Pause recognized phrases-->
+  <rule id="pause">
+    <tag>out.action = "pause";</tag>
+    <one-of>
+      <item>Pause the game</item>
+      <item>Pause game</item>
+      <item>Pause</item>
+
+      <item>Freeze</item>
+      <item>Freeze the game</item>
+    </one-of>
+  </rule>
+  <!--Menu recognized phrases-->
+  <rule id="quit">
+    <tag>out.action = "quit";</tag>
+    <one-of>
+      <item>Quit Game</item>
+      <item>Quit</item>
+      <item>Exit Game</item>
+    </one-of>
+  </rule>
+</grammar>

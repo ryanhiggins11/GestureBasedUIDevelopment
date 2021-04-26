@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<grammar xml:lang="en" root="Controls"
+         tag-format="semantics/1.0"
+         version="1.0"
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+  <!-- movement rules -->
+  <rule id="Controls">
+    <one-of>
+      <item>
+        <ruleref uri="#up"/>
+      </item>
+      <item>
+        <ruleref uri="#down"/>
+      </item>
+      <item>
+        <ruleref uri="#left"/>
+      </item>
+      <item>
+        <ruleref uri="#right"/>
+      </item>
+      <item>
+        <ruleref uri="#stop"/>
+      </item>
+      <item>
+        <ruleref uri="#stop"/>
+      </item>
+      <item>
+        <ruleref uri="#shoot"/>
+      </item>
+    </one-of>
+  </rule>
+  <!-- up movement -->
+  <rule id ="up">
+    <item>up</item>
+  </rule>
+  <!-- down -->
+  <rule id ="down">
+    <item>down</item>
+  </rule>
+  <!-- left -->
+  <rule id ="left">
+    <item>left</item>
+  </rule>
+  <!-- right -->
+  <rule id ="right">
+    <item>right</item>
+  </rule>
+  <!-- stop -->
+  <rule id ="stop">
+    <item>stop</item>
+  </rule>
+  <!-- shoot -->
+  <rule id ="shoot">
+    <item>shoot</item>
+  </rule>
+</grammar>
